@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Number Guessing Game - @ANU</h2>
+        <div class="game-container">
+            <h4>Guess a number between 1 and 100:</h4>
+            <label for="number">Random Number</label>
+            <input id="userInput" type="number" name="number" placeholder="Enter a random number">
+            <input id="guessButton" type="submit" onclick="genRandomNum();" value="Guess">
+            <h4 id="result">Result:</h4>
+            <div style="display: flex; align-items: center;">
+                <h4>Attemps: </h4><p id="attempsNum"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
