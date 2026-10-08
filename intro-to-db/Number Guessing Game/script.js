@@ -1,9 +1,8 @@
 var randomNum = Math.floor(Math.random() * 100) + 1;
-var guessButton = document.getElementById("guessButton");
-var userInput = document.getElementById("userInput").valueAsNumber;
 var attemps = 0;
-document.getElementById("attempsNum").innerHTML = attemps;
+var guessButton = document.getElementById("guessButton");
 function genRandomNum() {
+    var userInput = document.getElementById("userInput").valueAsNumber;
     if (userInput < 0 || userInput > 100){
         document.getElementById("result").innerHTML = "You entered an incorrect number";
     }
@@ -18,6 +17,8 @@ function genRandomNum() {
         document.getElementById("result").innerHTML = "Your Guess is Too High";
         attemps = attemps + 1;
     }
+    document.getElementById("attempsNum").innerHTML = attemps;
 }
 console.log(randomNum);
+console.log(attemps);
 
