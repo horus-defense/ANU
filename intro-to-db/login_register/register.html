@@ -14,7 +14,7 @@
         }
     </style>
     <h4>Intro to Database @ANU</h4>
-    <form action="register.php" method="post">
+    <form action="register.php" method="post" id="registerForm">
         <span class="form-title">SIGN UP</span>
         <div class="login-form">
             <div class="input-group">
@@ -46,6 +46,7 @@
                 <i class='bx bx-show toggle-password' onclick="togglePassword('confirm_password', this)"></i>
        
             </div>
+            <div id="message"></div>
             <input class="submit-btn" type="submit" value="SIGN UP">
             <div class="register-link">
                 <p>Already have an account? <a href="index.html">Sign in here</a></p>
