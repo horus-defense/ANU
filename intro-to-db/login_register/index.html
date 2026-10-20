@@ -9,7 +9,7 @@
 </head>
 <body>
     <h4>Intro to Database @ANU</h4>
-    <form action="login.php" method="post">
+    <form id="loginForm" action="login.php" method="post">
         <span class="form-title">SIGN IN</span>
         <div class="login-form">
             <div class="input-group">
@@ -24,6 +24,7 @@
                 </div>
                 <input type="password" id="password" name="password" placeholder="Password" required>
             </div>
+            <div id="message"></div>
             <input class="submit-btn" type="submit" value="SIGN IN" onsubmit="return checkPassword()">
             <div class="register-link">
                 <p>Don't have an account? <a href="register.html">Sign up here</a></p>
