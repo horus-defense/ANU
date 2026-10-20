@@ -1,18 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@font-face {
+  font-family: 'Cairo';
+  src: url('assets/Cairo-VariableFont_slnt,wght.ttf') format('truetype-variations');
+  font-weight: 200 1000; /* Supports weights from Thin to Black */
+  font-style: normal;
+  font-display: swap;
+}
+
 body{
     background: #0f0c29;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-family: "Cairo", sans-serif;
+    font-family: 'Cairo', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
-h4{
-    color:whitesmoke;
-    font-size: 1.5rem;
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 40%;
+    background-color: #0e0f2e73;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;   
 }
+
+nav > div > a {
+    color: whitesmoke !important;
+    font-weight: bold;
+}
+
+nav > div > a:hover {
+    color: #aaadff !important
+}
+
+h2{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-text{
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 form{
     display: flex;
@@ -21,12 +71,6 @@ form{
     background-color: #0e0f2ead;
     width: 400px;
     height: 380px;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
     border-radius: 10px;
     color: whitesmoke;
 }
@@ -36,7 +80,7 @@ form{
     letter-spacing: 2px;
     font-weight: 500;
     font-size: 3rem;
-    border-radius: 12px;
+    border-radius: 10px;
     font-weight: 800;
     margin-left: 20px;
 }
@@ -56,16 +100,30 @@ input{
     font-weight: 700;
     border-radius:0px 5px 5px 0px;
     width: 100%;
-    background-color: #0e0f2e81;
+    background-color: transparent;
 }
 input:focus{
     outline: none;
+}
+
+::placeholder {
+    color: whitesmoke;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: .8rem;
 }
 .input-group {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 90%;
+    background-color: #0e0f2e;
+}
+
+.input-group:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+
 }
 
 .icons {
@@ -73,21 +131,18 @@ input:focus{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 20%;
+    padding-left: 15px;
+    padding-right: 15px;
     height: 100%;
-    background-color: #0e0f2e;
     border-radius:5px 0px 0px 5px;
     font-size: 1.5rem;
+    fill: whitesmoke;
+    border-right: rgba(255, 255, 255, 0.238) 2px solid;
 }
-::placeholder {
-    color: whitesmoke;
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size: .8rem;
-}
+
 .submit-btn{
     width: 80%;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     background-color: #0e0f2ec4;
     color: whitesmoke;
@@ -98,6 +153,9 @@ input:focus{
 .submit-btn:hover{
     background-color: #0e0f2e;
     cursor: pointer;
+    color: #aaadff;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
 }
 
 a{
@@ -110,16 +168,38 @@ a:hover {
     color: #aaadff80;
 }
 
+
+.register-link > p > a {
+      animation: blink 1000ms infinite;
+}
+
 .toggle-password {
-    position: absolute;
-    right: 10%;
-    font-size: 1.2rem;
     cursor: pointer;
-    color: whitesmoke;
+    fill: whitesmoke;
+    margin-right: 10px;
+}
+
+.toggle-password:hover {
+    fill: #aaadff;
+    transition: all 0.2s ease-in-out;
 }
 
 #message {
     font-size: 1rem;
     letter-spacing: 1.5px;
     color: whitesmoke;
+}
+
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
