@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+</head>
+<body>
+    <style>
+        form {
+            height: 500px;
+        }
+    </style>
+    <h4>Intro to Database @ANU</h4>
+    <form action="register.php" method="post">
+        <span class="form-title">SIGN UP</span>
+        <div class="login-form">
+            <div class="input-group">
+                <div class="icons">
+                    <i class='bx bx-user'></i>
+                </div>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <div class="icons">
+                    <i class='bx bx-envelope' ></i>
+                </div>
+                <input type="email" id="email" name="regEmail" placeholder="Email" required>
+            </div>
+            
+            <div class="input-group">
+                <div class="icons">
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <i class='bx bx-show toggle-password' onclick="togglePassword('password', this)"></i>
+                    
+            </div>
+             <div class="input-group">
+                <div class="icons">
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                <i class='bx bx-show toggle-password' onclick="togglePassword('confirm_password', this)"></i>
+       
+            </div>
+            <input class="submit-btn" type="submit" value="SIGN UP">
+            <div class="register-link">
+                <p>Already have an account? <a href="index.html">Sign in here</a></p>
+            </div>
+        </div>
+        
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

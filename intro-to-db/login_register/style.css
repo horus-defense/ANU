@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+body{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Cairo", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h4{
+    color:whitesmoke;
+    font-size: 1.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #0e0f2ead;
+    width: 400px;
+    height: 380px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+.form-title {
+    width: 55%;    
+    color: whitesmoke;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 3rem;
+    border-radius: 12px;
+    font-weight: 800;
+    margin-left: 20px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height:100%;
+}
+
+input{
+    border: none;
+    padding: 15px;
+    color: whitesmoke;
+    font-weight: 700;
+    border-radius:0px 5px 5px 0px;
+    width: 100%;
+    background-color: #0e0f2e81;
+}
+input:focus{
+    outline: none;
+}
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    background-color: #0e0f2e;
+    border-radius:5px 0px 0px 5px;
+    font-size: 1.5rem;
+}
+::placeholder {
+    color: whitesmoke;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: .8rem;
+}
+.submit-btn{
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    background-color: #0e0f2ec4;
+    color: whitesmoke;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.submit-btn:hover{
+    background-color: #0e0f2e;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #aaadff;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+a:hover {
+    color: #aaadff80;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+

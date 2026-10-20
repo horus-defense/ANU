@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <h4>Intro to Database @ANU</h4>
+    <form action="login.php" method="post">
+        <span class="form-title">SIGN IN</span>
+        <div class="login-form">
+            <div class="input-group">
+                <div class="icons">
+                    <i class='bx bx-envelope' ></i>
+                </div>
+                <input type="email" id="username" name="logEmail" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <div class="icons">
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <input class="submit-btn" type="submit" value="SIGN IN" onsubmit="return checkPassword()">
+            <div class="register-link">
+                <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+            </div>
+        </div>
+        
+    </form>
+</body>
+</html>
