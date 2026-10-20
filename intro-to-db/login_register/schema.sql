@@ -1,0 +1,10 @@
+CREATE DATABASE registration;
+USE registration;
+
+CREATE TABLE students (
+    user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(225) NOT NULL UNIQUE,
+    name VARCHAR(225) NOT NULL,
+    password VARCHAR(225) NOT NULL,
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
