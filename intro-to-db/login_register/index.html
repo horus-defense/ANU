@@ -3,34 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
     <title>Login</title>
 </head>
 <body>
-    <h4>Intro to Database @ANU</h4>
-    <form id="loginForm" action="login.php" method="post">
-        <span class="form-title">SIGN IN</span>
-        <div class="login-form">
-            <div class="input-group">
-                <div class="icons">
-                    <i class='bx bx-envelope' ></i>
-                </div>
-                <input type="email" id="username" name="logEmail" placeholder="Email" required>
-            </div>
-            <div class="input-group">
-                <div class="icons">
-                    <i class='bx bx-lock-alt'></i>
-                </div>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-            </div>
-            <div id="message"></div>
-            <input class="submit-btn" type="submit" value="SIGN IN" onsubmit="return checkPassword()">
-            <div class="register-link">
-                <p>Don't have an account? <a href="register.html">Sign up here</a></p>
-            </div>
+    <nav>
+        <div class="">
+            <a href="index.html">Login</a>
         </div>
-        
-    </form>
+        <div class="">
+            <a href="register.html">Register</a>
+        </div>
+    </nav>
+    <br>
+    <header>
+        <img src="assets/logo.png" alt="ANU LOGO" width="150px">
+        <span id="header-text">Intro to Database Systems</span>
+    </header>
+    <br>
+    <div class="container">
+        <form id="loginForm" action="login.php" method="post">
+            <span class="form-title">SIGN IN</span>
+            <div class="login-form">
+                <div class="input-group">
+                    <div class="icons">
+                        <i class='bx bx-envelope' ></i>
+                    </div>
+                    <input type="email" id="username" name="logEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <div class="icons">
+                        <i class='bx bx-lock-alt' ></i>
+                    </div>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <div id="message"></div>
+                <input class="submit-btn" type="submit" value="SIGN IN" onsubmit="return checkPassword()">
+                <div class="register-link">
+                    <p>Don't have an account? <a href="register.html">Sign up here</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    
+    <script src="script.js"></script>    
 </body>
 </html>
