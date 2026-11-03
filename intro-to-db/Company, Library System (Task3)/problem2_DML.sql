@@ -33,8 +33,8 @@ SELECT name FROM member WHERE join_date > '2000-09-01'
 ##2
 SELECT * FROM member WHERE join_date > '1995-10-01' AND join_date < '2019-10-01'
 ##3 
-SELECT * FROM book JOIN publisher ON book.pub_id = publisher.pub_id WHERE publisher.name = 'Youssef Amr' OR book.price > 15 AND book.price < 20;
+SELECT * FROM book JOIN publisher ON book.pub_id = publisher.pub_id WHERE publisher.name = 'Youssef Amr' OR book.price BETWEEN 15 AND 20;
 ##4 
-SELECT book.title FROM book, borrowing_book, member WHERE book.book_id = borrowing_book.book_id AND member.member_id = borrowing_book.member_id AND member.name = 'Amr Adel';
+SELECT title FROM book JOIN borrowing_book ON borrowing_book.book_id = book.book_id JOIN member ON borrowing_book.member_id = member.member_id WHERE member.name = 'Amr Adel';
 ##5
-SELECT name FROM member,borrowing_book WHERE member.member_id = borrowing_book.member_id AND borrowing_book.borrow_date > '2018-12-31' AND borrowing_book.borrow_date < '2020-01-01';
+SELECT name FROM member JOIN borrowing_book ON member.member_id = borrowing_book.member_id AND borrowing_book.borrow_date >= '2019-01-01' AND borrowing_book.borrow_date <= '2019-12-31';
