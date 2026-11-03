@@ -1,0 +1,15 @@
+
+1##
+DELETE FROM Employee WHERE SSN = 101;
+Error #1451: Cannot delete or update a parent row: a foreign key constraint fails.
+--------------------------------------------------
+2##
+INSERT INTO `project`(`pnumber`, `pname`, `plocation`, `dno`) VALUES ('4','test_project','test_address','4')
+#1452 - Cannot add or update a child row: a foreign key constraint fails (`company`.`project`, CONSTRAINT `project_ibfk_1` FOREIGN KEY (`dno`) REFERENCES `department` (`dnumber`))
+--------------------------------------------------
+3##
+SET FOREIGN_KEY_CHECKS = 0;
+SET FOREIGN_KEY_CHECKS = 1;
+
+OR 
+Disable the Checks from phpMyAdmin 
