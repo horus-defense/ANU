@@ -1,0 +1,78 @@
+Question 1
+SELECT customer_name FROM customer WHERE customer_name LIKE 'Ma%';
+
+Output:
+customer_name
+Mahmoud Ahmed
+Mariam Adel
+
+--------------------------------------------------
+Question 2
+SELECT COUNT(order_item.item_id) AS Items_Count, SUM(unit_price * quantity) AS Total_Price, order_id
+FROM order_item JOIN item ON order_item.item_id = item.item_id
+GROUP BY order_id;
+
+Output:
+Items_Count  Total_Price  order_id
+2            1050.00      1
+2            1250.00      2
+1            600.00       3
+1            500.00       4
+
+--------------------------------------------------
+Question 3
+SELECT `order`.order_id FROM `order`
+JOIN shipment ON shipment.order_id = `order`.order_id
+JOIN warehouse ON warehouse.warehouse_id = shipment.warehouse_id
+WHERE warehouse_city = 'Arica'
+GROUP BY `order`.order_id;
+
+Output:
+order_id
+2
+
+--------------------------------------------------
+Question 4
+SELECT SUM(item.unit_price * order_item.quantity) AS Total_Price_Of_Orders
+FROM shipment JOIN order_item ON order_item.order_id = shipment.order_id
+JOIN item ON order_item.item_id = item.item_id WHERE warehouse_id = 8;
+
+Output:
+Total_Price_Of_Orders
+1650.00
+
+--------------------------------------------------
+Question 5
+SELECT warehouse.warehouse_id, warehouse.warehouse_city, COUNT(shipment.order_id) AS Warehouse_Orders
+FROM warehouse LEFT JOIN shipment ON shipment.warehouse_id = warehouse.warehouse_id
+GROUP BY warehouse.warehouse_id;
+
+Output:
+warehouse_id  warehouse_city  Warehouse_Orders
+1             Alexandria      1
+2             Arica           1
+8             Cairo           2
+9             Tanta           0
+
+--------------------------------------------------
+Question 6
+SELECT customer_name, COUNT(`order`.order_id) AS Orders
+FROM customer LEFT JOIN `order` ON customer.customer_id = `order`.customer_id
+GROUP BY customer.customer_id, customer_name;
+
+Output:
+customer_name   Orders
+Mahmoud Ahmed   2
+Mariam Adel     0
+Mohamed Ali     1
+Mostafa Hassan  1
+
+--------------------------------------------------
+Question 7
+SELECT item.item_id FROM item
+LEFT JOIN order_item ON order_item.item_id = item.item_id
+WHERE order_item.item_id IS NULL;
+
+Output:
+item_id
+4
